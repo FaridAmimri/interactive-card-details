@@ -21,14 +21,6 @@ code {
   background: #21092f;
 }
 
-.card-details {
-  /* position: absolute; */
-  width: 541px;
-  height: 527px;
-  left: 164px;
-  top: 187px;
-}
-
 .face-card-details {
   height: 245px;
   width: 447px;
