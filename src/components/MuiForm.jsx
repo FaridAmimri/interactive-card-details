@@ -1,6 +1,6 @@
 /** @format */
 
-import { React, useState } from 'react'
+import { React } from 'react'
 import { Grid } from '@mui/material'
 import MuiInput from './MuiInput'
 import MuiButton from './MuiButton'
@@ -52,6 +52,7 @@ function MuiForm() {
         helperText='CARDHOLDER NAME'
         value={values.name}
         onChange={handleInputChange}
+        error={errors.name}
       />
       <MuiInput
         className='textField'
@@ -60,6 +61,7 @@ function MuiForm() {
         helperText='CARD NUMBER'
         value={values.number}
         onChange={handleInputChange}
+        error={errors.number}
       />
       <Grid item xs={6} className='formGrid'>
         <MuiInput
@@ -69,6 +71,7 @@ function MuiForm() {
           helperText='EXP. DATE'
           value={values.month}
           onChange={handleInputChange}
+          error={errors.month}
         />
         <MuiInput
           name='year'
@@ -77,6 +80,7 @@ function MuiForm() {
           className='textField expDate'
           value={values.year}
           onChange={handleInputChange}
+          error={errors.year}
         />
         <MuiInput
           name='cvc'
@@ -85,6 +89,7 @@ function MuiForm() {
           className='textField cvc'
           value={values.cvc}
           onChange={handleInputChange}
+          error={errors.cvc}
         />
       </Grid>
       <MuiButton color='violet' text='Confirm' type='submit' />
