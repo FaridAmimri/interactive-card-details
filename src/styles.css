@@ -87,6 +87,11 @@ code {
   z-index: 999;
 }
 
+.card-date {
+  display: flex;
+  justify-content: space-between;
+}
+
 .back-card-details {
   position: absolute;
   width: 447px;
@@ -95,6 +100,14 @@ code {
   top: 469px;
   background: linear-gradient(168.73deg, #ffffff 5%, #d2d3d9 91.69%);
   border-radius: 10px;
+}
+
+.back-card-cvc {
+  float: right;
+  font-size: 14px;
+  letter-spacing: 2px;
+  color: #ffffff;
+  padding-right: 10px;
 }
 
 .black-rectangle {
