@@ -14,16 +14,16 @@ const initialFValues = {
   cvc: ''
 }
 
-function MuiForm() {
+function Form({ setRecords }) {
   const { values, setValues, errors, setErrors } = useForm(initialFValues)
 
   function validate() {
     let temp = {}
     temp.name = values.name ? '' : "Can't be blank"
-    temp.number = values.number.length > 16 ? '' : 'Minimum 16 numbers required'
-    temp.month = values.month.length === 2 ? '' : '2 numbers required'
-    temp.year = values.year === 2 ? '' : '2 numbers required'
-    temp.cvc = values.cvc === 3 ? '' : '3 numbers required'
+    temp.number = values.number.length === 16 ? '' : 'Minimum 16 numbers required'
+    temp.month = values.month.length === 2 ? '' : '2 numbers'
+    temp.year = values.year.length === 2 ? '' : '2 numbers'
+    temp.cvc = values.cvc.length === 3 ? '' : '3 numbers'
     setErrors({
       ...temp
     })
@@ -40,6 +40,9 @@ function MuiForm() {
     setValues({
       ...values,
       [name]: value
+    })
+    setRecords({
+      ...values
     })
   }
 
@@ -97,4 +100,4 @@ function MuiForm() {
   )
 }
 
-export default MuiForm
+export default Form

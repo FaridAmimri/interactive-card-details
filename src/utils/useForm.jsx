@@ -1,6 +1,6 @@
 /** @format */
 
-import { React, useState } from 'react'
+import { useState } from 'react'
 
 export function useForm(initialFValues) {
   const [values, setValues] = useState(initialFValues)
