@@ -4,23 +4,13 @@ import { React } from 'react'
 import { Grid } from '@mui/material'
 import MuiInput from './MuiInput'
 import MuiButton from './MuiButton'
-import { useForm } from '../utils/useForm'
 
-const initialFValues = {
-  name: '',
-  number: '',
-  month: '',
-  year: '',
-  cvc: ''
-}
-
-function Form({ setRecords }) {
-  const { values, setValues, errors, setErrors } = useForm(initialFValues)
+function Form({ values, setValues, errors, setErrors }) {
 
   function validate() {
     let temp = {}
     temp.name = values.name ? '' : "Can't be blank"
-    temp.number = values.number.length === 16 ? '' : 'Minimum 16 numbers required'
+    temp.number = (/[0-9]{4} {1}[0-9]{4} {1}[0-9]{4} {1}[0-9]{4}\d{11}/).test(values.number) ? '' : '16 numbers required'
     temp.month = values.month.length === 2 ? '' : '2 numbers'
     temp.year = values.year.length === 2 ? '' : '2 numbers'
     temp.cvc = values.cvc.length === 3 ? '' : '3 numbers'
@@ -40,9 +30,6 @@ function Form({ setRecords }) {
     setValues({
       ...values,
       [name]: value
-    })
-    setRecords({
-      ...values
     })
   }
 
