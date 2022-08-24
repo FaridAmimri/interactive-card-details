@@ -1,9 +1,10 @@
 /** @format */
 
-import {React, useState} from 'react'
+import { React, useState } from 'react'
 import FrontCard from './components/FrontCard'
 import BackCard from './components/BackCard'
 import Form from './components/Form'
+import Modal from './components/Modal'
 
 const initialValues = {
   name: '',
@@ -14,16 +15,26 @@ const initialValues = {
 }
 
 function App() {
-
   const [values, setValues] = useState(initialValues)
   const [errors, setErrors] = useState({})
+  const [openModal, setOpenModal] = useState(false)
 
   return (
     <div className='App'>
       <div className='layout'></div>
       <FrontCard values={values} />
       <BackCard values={values} />
-      <Form values={values} setValues={setValues} errors={errors} setErrors={setErrors} />
+      {!openModal && (
+        <Form
+          values={values}
+          setValues={setValues}
+          errors={errors}
+          setErrors={setErrors}
+          openModal={openModal}
+          setOpenModal={setOpenModal}
+        />
+      )}
+      {openModal && <Modal setOpenModal={setOpenModal} />}
     </div>
   )
 }
