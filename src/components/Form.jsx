@@ -5,12 +5,12 @@ import { Grid } from '@mui/material'
 import MuiInput from './MuiInput'
 import MuiButton from './MuiButton'
 
-function Form({ values, setValues, errors, setErrors }) {
+function Form({ values, setValues, errors, setErrors, setOpenModal }) {
 
   function validate() {
     let temp = {}
     temp.name = values.name ? '' : "Can't be blank"
-    temp.number = (/[0-9]{4} {1}[0-9]{4} {1}[0-9]{4} {1}[0-9]{4}\d{11}/).test(values.number) ? '' : '16 numbers required'
+    temp.number = (/[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}/).test(values.number) ? '' : '16 numbers required'
     temp.month = values.month.length === 2 ? '' : '2 numbers'
     temp.year = values.year.length === 2 ? '' : '2 numbers'
     temp.cvc = values.cvc.length === 3 ? '' : '3 numbers'
@@ -22,7 +22,9 @@ function Form({ values, setValues, errors, setErrors }) {
 
   function handleSubmit(e) {
     e.preventDefault()
-    if (validate()) window.alert('test ok')
+    if(validate()) {
+      setOpenModal(true)
+    }
   }
 
   function handleInputChange(e) {
