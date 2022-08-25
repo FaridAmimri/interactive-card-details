@@ -7,11 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 .layout {
   position: absolute;
   width: 483px;
@@ -270,7 +265,7 @@ code {
 .thanking p {
   font-size: 18px;
   font-weight: 500;
-  color: #8F8694;
+  color: #8f8694;
 }
 
 .circleIcon {
@@ -286,4 +281,91 @@ code {
 .circleIcon svg {
   color: white;
   font-size: xx-large;
+}
+
+@media only screen and (max-width: 376px) {
+  .layout {
+    width: 375px;
+    height: 240px;
+  }
+
+  /* ==== Front Card === */
+  .face-card-details {
+    height: 157px;
+    width: 286px;
+    position: absolute;
+    left: 16px;
+    top: 126px;
+    border-radius: 6px;
+    border: none;
+    z-index: 99;
+  }
+  .card-number {
+    height: 23px;
+    width: 239px;
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+  .card-footer {
+    height: 12px;
+    width: 245px;
+    font-size: 9px;
+  }
+
+  /* ==== Back Card === */
+  .back-card-details {
+    height: 157px;
+    width: 286px;
+    left: 73px;
+    top: 32px;
+    border-radius: 6px;
+  }
+  .back-card-cvc {
+    font-size: 9px;
+    letter-spacing: 1px;
+  }
+  .black-rectangle {
+    width: 286px;
+    height: 34px;
+  }
+  .grey-rectangle {
+    height: 28px;
+    width: 231px;
+  }
+  .backcard-png {
+    display: none;
+  }
+
+  /* ==== Form === */
+  .form-card {
+    position: absolute;
+    width: 327px;
+    height: 328px;
+    left: 24px;
+    top: 331px;
+  }
+  .textField {
+    width: 327px;
+  }
+  .textField p {
+    letter-spacing: 1px;
+  }
+  .expDate {
+    width: 72px;
+  }
+  .cvc {
+    width: 164px;
+  }
+  .muiButton {
+    width: 327px;
+  }
+
+  /* ==== Modal === */
+  .modal {
+    position: absolute;
+    width: 327px;
+    height: 291px;
+    left: 24px;
+    top: 331px;
+  }
 }
