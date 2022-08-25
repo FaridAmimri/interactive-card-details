@@ -4,7 +4,13 @@ import React from 'react'
 import CheckIcon from '@mui/icons-material/Check'
 import MuiButton from './MuiButton'
 
-function Modal({ setOpenModal }) {
+function Modal({ initialValues, setValues, setErrors, setOpenModal }) {
+
+  function resetForm() {
+    setValues(initialValues)
+    setErrors({})
+  }
+
   return (
     <div className='modal'>
       <div className='circleIcon'>
@@ -18,6 +24,7 @@ function Modal({ setOpenModal }) {
         color='violet'
         text='Continue'
         onClick={() => {
+          resetForm()
           setOpenModal(false)
         }}
       />
