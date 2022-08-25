@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/interactive-card-details/static/css/main.1a236cf5.css",
+    "main.js": "/interactive-card-details/static/js/main.e3ba7025.js",
+    "index.html": "/interactive-card-details/index.html",
+    "main.1a236cf5.css.map": "/interactive-card-details/static/css/main.1a236cf5.css.map",
+    "main.e3ba7025.js.map": "/interactive-card-details/static/js/main.e3ba7025.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a236cf5.css",
+    "static/js/main.e3ba7025.js"
+  ]
+}
