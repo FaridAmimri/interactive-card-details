@@ -34,7 +34,14 @@ function App() {
           setOpenModal={setOpenModal}
         />
       )}
-      {openModal && <Modal setOpenModal={setOpenModal} />}
+      {openModal && (
+        <Modal
+          initialValues={initialValues}
+          setValues={setValues}
+          setErrors={setErrors}
+          setOpenModal={setOpenModal}
+        />
+      )}
     </div>
   )
 }
