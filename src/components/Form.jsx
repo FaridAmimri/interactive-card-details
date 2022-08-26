@@ -55,7 +55,7 @@ function Form({ values, setValues, errors, setErrors,openModal, setOpenModal }) 
         onChange={handleInputChange}
         error={errors.number}
       />
-      <Grid item xs={6} className='formGrid'>
+      <Grid item xs={6} className='form-grid'>
         <MuiInput
           className='textField expDate'
           name='month'

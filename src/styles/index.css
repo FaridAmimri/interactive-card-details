@@ -18,7 +18,7 @@ body {
 
 /* ==== Front Card === */
 
-.face-card-details {
+.front-card {
   height: 245px;
   width: 447px;
   position: absolute;
@@ -91,7 +91,7 @@ body {
 
 /* ==== Back Card === */
 
-.back-card-details {
+.back-card {
   position: absolute;
   width: 447px;
   height: 245px;

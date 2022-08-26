@@ -5,7 +5,7 @@ import BackCardPng from '../assets/back-card.png'
 
 function BackCard({ values }) {
   return (
-    <div className='back-card-details'>
+    <div className='back-card'>
       <div className='black-rectangle'></div>
       <div className='grey-rectangle'>
         {values.cvc ? (

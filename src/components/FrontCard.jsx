@@ -5,7 +5,7 @@ import React from 'react'
 function FrontCard({ values }) {
   return (
     <>
-      <div className='face-card-details'>
+      <div className='front-card'>
         <div className='card-header'>
           <div className='big-circle'></div>
           <div className='small-circle'></div>
